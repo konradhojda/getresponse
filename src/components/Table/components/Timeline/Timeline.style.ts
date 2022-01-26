@@ -12,6 +12,7 @@ export const TimelineWorkout = styled.div`
   justify-content: center;
   margin-top: 35px;
   height: 35px;
+  color: #828282;
 `;
 
 export const TimelineItem = styled.div`
@@ -21,6 +22,9 @@ export const TimelineItem = styled.div`
   height: 90px;
   width: 85px;
   border: 1px solid #d4d4d4;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  color: #828282;
 
   &:first-of-type {
     margin-top: 50px;

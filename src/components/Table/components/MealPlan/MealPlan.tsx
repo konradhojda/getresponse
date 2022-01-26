@@ -8,6 +8,9 @@ interface Props {
 
 const MealPlan = ({ data }: Props) => {
   const onCLick = (event: React.MouseEvent<HTMLElement>) => {
+    if (event.currentTarget.classList.contains("current")) {
+      return;
+    }
     event.currentTarget.classList.toggle("active");
   };
 
@@ -16,12 +19,12 @@ const MealPlan = ({ data }: Props) => {
       {data.map((item: SingleItem) => (
         <S.MealPlanColumnContainer
           onClick={onCLick}
-          className={item.current ? "active" : ""}
+          className={item.current ? "current" : ""}
         >
           <S.MealPlanItem className="week">{`Week ${item.id}`}</S.MealPlanItem>
           {item.meals &&
             item.meals.map((f: Meal, index) => (
-              <S.MealPlanItem key={index}>
+              <S.MealPlanItem key={index} className="diet-element">
                 {f.name}
                 {f.img && <img src={f.img} alt="img-description" />}
               </S.MealPlanItem>

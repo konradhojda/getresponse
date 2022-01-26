@@ -9,19 +9,28 @@ export const MealPlanContainer = styled.div`
 
 export const MealPlanItem = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   height: 90px;
   width: 126px;
   padding: 11px 10px 12px 12px;
   border-bottom: 1px solid #e9e9e9;
+  font-family: "Arial MT", sans-serif;
+  font-size: 13px;
+  color: #828282;
   &:nth-of-type(2) {
     border-top: 1px solid #e9e9e9;
   }
   &.week {
+    font-family: "Helvetica Neue", sans-serif;
     height: 50px;
+    justify-content: center;
     border: none;
+    color: #adbb0c;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  img {
+    max-height: 61px;
   }
 `;
 
@@ -74,11 +83,22 @@ export const DietType = styled.div`
   justify-content: center;
   border: 1px solid #d4d4d4;
   border-top: none;
+  color: #828282;
 `;
 
 export const MealPlanColumnContainer = styled.div`
   border: 1px solid #e9e9e9;
   &.active {
-    border: 1px solid orange;
+    border: 1px solid #ff801a;
+  }
+  &.current {
+    border: 1px solid #ff801a;
+    .week {
+      color: #ff801a;
+    }
+    .diet-element {
+      color: #000;
+      font-weight: bold;
+    }
   }
 `;

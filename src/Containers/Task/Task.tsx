@@ -27,15 +27,21 @@ const Task = () => {
     <S.TaskContainer>
       <S.TopBar>
         <WeekProgress progressStatus={6} />
-        <div>
-          <button onClick={goToPrevWeekend} disabled={currentWeekend === 1}>
-            -
-          </button>
-          {currentWeekend}
-          <button onClick={goToNextWeekend} disabled={currentWeekend === 4}>
-            +
-          </button>
-        </div>
+        <S.WeekContainer>
+          <S.WeekButton
+            onClick={goToPrevWeekend}
+            disabled={currentWeekend === 1}
+          >
+            {`<`}
+          </S.WeekButton>
+          <S.CurrentWeek>{currentWeekend}</S.CurrentWeek>
+          <S.WeekButton
+            onClick={goToNextWeekend}
+            disabled={currentWeekend === 4}
+          >
+            {`>`}
+          </S.WeekButton>
+        </S.WeekContainer>
         <div>Protein options</div>
       </S.TopBar>
       <Table data={data} hours={hours} />
