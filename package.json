@@ -1,6 +1,7 @@
 {
   "name": "gr-app",
   "version": "0.1.0",
+  "homepage" : "https://konradhojda.github.io/getresponse"
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.2.2",
